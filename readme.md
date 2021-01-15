@@ -22,17 +22,15 @@ The oldest form of LCD display, patented in the 1980's, is known as Twisted Nema
 
 **LED driver ICs** There are many LED driver ICs on the market, which give you control over multiple LED segments from a single synchronous serial interface. Some include PWM control over each channel as well. Popular ones include Maxim's [MAX7219](https://www.maximintegrated.com/en/products/power/display-power-control/MAX7219.html) and Texas Instruments' [TLC5947](https://www.ti.com/product/TLC5947). Many of the hobbyist electronic vendors carry breakout boards for these chips. 
 
+## Control Interfaces
 
- addressable LED
-
-## Control Methods
-
+Displays for microcontrollers use a variety of control interfaces. The most common are the ones you see for other electronic modules as well: synchronous serial interfaces like I2C and SPI, or asynchronous serial interfaces.
 
 ### SPI
  * ST7687S round LCD display from DFRobot -- see clock club repo
  * TFT displays - [TFT Library](https://www.arduino.cc/reference/en/libraries/tft/) based on ST7735 chipset
  * ILI9225 TFT display -- see clock club repo
- * EInk
+ * [ePaper](EPaper_examples)
 
 ### I2C
  * SSD1306
