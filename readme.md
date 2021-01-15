@@ -30,7 +30,7 @@ Displays for microcontrollers use a variety of control interfaces. The most comm
  * ST7687S round LCD display from DFRobot -- see clock club repo
  * TFT displays - [TFT Library](https://www.arduino.cc/reference/en/libraries/tft/) based on ST7735 chipset
  * ILI9225 TFT display -- see clock club repo
- * [ePaper](EPaper_examples)
+ * [ePaper](EPaper_examples/)
 
 ### I2C
  * SSD1306
