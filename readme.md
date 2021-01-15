@@ -10,7 +10,7 @@ There are a number of different kinds of displays that can be driven by a microc
 
 **OLED** - an OLED screen replaces the liquid crystal with a matrix of organic LEDs. This eliminates the need for a backlight, since each pixel generates its own light. For more on OLEDs, see [this introduction](https://www.energy.gov/eere/ssl/oled-basics) from ehergy.gov. CNET provides this [comparison of LCD vs OLED displays](https://www.cnet.com/news/what-is-oled-and-what-can-it-do-for-your-tv/). 
 
-**ePaper**  - ePaper displays use a matrix of tiny capsules which are black or colored on one side, and white on the other. Applying a charge to each capsule causes it to turn one way or the other. Unlike LCD or LED displays, ePaper displays maintain their state when powered off. ePaper displays cannot be refreshed as fast as LCD or LED, however. ePaper displays are typically not backlit, and require external lighting. eInk, the primary maker of ePaper displays, has a good [FAQ](https://www.eink.com/faqs.html) on the technology. Visionect.com has a helpful [illustrated explanation](https://www.visionect.com/blog/electronic-paper-explained-what-is-it-and-how-does-it-work/) as well. 
+**[ePaper](EPaper_xamples/)**  - ePaper displays use a matrix of tiny capsules which are black or colored on one side, and white on the other. Applying a charge to each capsule causes it to turn one way or the other. Unlike LCD or LED displays, ePaper displays maintain their state when powered off. ePaper displays cannot be refreshed as fast as LCD or LED, however. ePaper displays are typically not backlit, and require external lighting. eInk, the primary maker of ePaper displays, has a good [FAQ](https://www.eink.com/faqs.html) on the technology. Visionect.com has a helpful [illustrated explanation](https://www.visionect.com/blog/electronic-paper-explained-what-is-it-and-how-does-it-work/) as well. 
 
 ## Driver Technologies
 
@@ -30,7 +30,7 @@ Displays for microcontrollers use a variety of control interfaces. The most comm
  * ST7687S round LCD display from DFRobot -- see clock club repo
  * TFT displays - [TFT Library](https://www.arduino.cc/reference/en/libraries/tft/) based on ST7735 chipset
  * ILI9225 TFT display -- see clock club repo
- * [ePaper](EPaper_examples/)
+ * [ePaper](EPaper_xamples/)
 
 ### I2C
  * SSD1306
