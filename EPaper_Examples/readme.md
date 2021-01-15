@@ -51,7 +51,7 @@ The pin connections for connecting ePaper displays to an Arduino Nano are as fol
 ## The Library
 Adafruit's [Adafruit_EPD library](https://github.com/adafruit/Adafruit_EPD) supports a lot of different driver boards, and if you don't know which one yours is, you need to experiment to find out. Their [EPDTest](https://github.com/adafruit/Adafruit_EPD/blob/master/examples/EPDTest/EPDTest.ino) example helps. It lists all the drivers that the library supports, each with its own initializer function. You pick the one you need. If you have to guess, start with what you know about your board:
 * What's the resolution? 152x152, 200x200, 250x122 or something else? Look at the initializers with your resolution
-* Are you using their flexible display? You might need the flexible `#define` like so: `#define FLEXIBLE_290` or `#define FLEXIBLE_213`
+* Are you using their flexible display? You might need the flexible `#define` like so: `#define FLEXIBLE_290` or `#define FLEXIBLE_213` These numbers are your display's horizontal resolution.
 
 This usually narrows your choice to 2 or 3 initializers. Try each one in turn until you see the display react as described in the comments. Make sure to change the pin #defines at the top of the code to match your pin numbers as well. 
 
