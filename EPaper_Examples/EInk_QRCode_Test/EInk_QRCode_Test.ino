@@ -5,8 +5,10 @@
    Uses Adafruit EPD library: http://librarymanager/All#Adafruit_EPD
    and Richard Moore's qrcode library: http://librarymanager/All#qrcode
    Code is based on qrcode library example and Adafruit_EPD example.
-
-   To test, enter a text string, then scan it with your mobile device
+   To test, enter a text string, then scan it with your mobile device.
+   Circuit:
+   - 1.54-inch ePaper display connected to SPI pins, and connected to
+   the pins listed below.
 
   created 8 Jan 2021
   by Tom Igoe
@@ -19,31 +21,31 @@
 // must be connected, and note that EPD_CS is the SPI CS pin:
 const int EPD_CS = 10;
 const int  EPD_DC = 9;
-const int  SRAM_CS = 8;
+const int  SRAM_CS = 8;  // for boards without a frame buffer, set to -1
 const int  EPD_RESET = 7;
-const int EPD_BUSY = 6; // optional. for faster response, attach this to a pin
+const int EPD_BUSY = 6;
 
-// You may need to use a different initializer depending on your screen.
-// This works for 1.54 inch x 1.54 inch displays:
+/*
+  You may need to use a different initializer depending on your screen.
+  see https://github.com/adafruit/Adafruit_EPD/blob/master/examples/EPDTest/EPDTest.ino
+  lines 19ff. for all the chipsets that the Adafruit EPD supports.
+*/
+// supports Adafruit's 1.54inch displays, Sparkfun's SparkX 1.54" display:
 Adafruit_IL0373 display(152, 152, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
-//Adafruit_SSD1680 display(152, 152, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
-//Adafruit_UC8151D display(152, 152, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
-//Adafruit_SSD1608 display(200, 200, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
+// supports WaveShare's 1.54" display. Set SRAM_CS to -1:
 //Adafruit_SSD1681 display(200, 200, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
-//Adafruit_IL0373 display(296, 128, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
-//#define FLEXIBLE_290
 
 void setup() {
+  // initialize serial?
   Serial.begin(9600);
+  // when reading serial input set a 10ms timeout:
   Serial.setTimeout(10);
-  while(!Serial);
+  // wait for serial monitor to open:
+  while (!Serial);
   // start the display:
   display.begin();
   display.clearBuffer();
   display.display();
-
-  // wait for serial monitor to open:
-  while (!Serial);
   Serial.println("Enter a text message to display:");
 }
 

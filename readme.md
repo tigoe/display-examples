@@ -1,8 +1,10 @@
-# Screens for Microcontrollers
+# Displays for Microcontrollers
 
-There are a number of different kinds of sceeens that can be driven by a microcontroller. Listed here are a few of the more common ones, and some explanations of the terminology used to describe them. 
+There are a number of different kinds of displays that can be driven by a microcontroller. Listed here are a few of the more common ones, and some explanations of the terminology used to describe them. 
 
 ## Display Technologies
+
+**Multi-Segment LED display** - There are many models of multi-segment LED displays, including the classic 7-segment LEDs, alphanumeric displays, dot-matrix diplays, bar graph displays, RGB LEDs, and others. What these share in common is that they will have either a common-cathode or common-anode structure. Common cathode LEDs have multiple anodes, one for each LED segment, and one cathode for all. common anode LEDs have a single anode and multiple cathode for all the segments. Driving these displays requires a control pin for each LED segment. They are usually driven by a multiplexer or LED driver, which can provide both a common interface for all the LEDs (such as an SPI or I2C interface), and a controlled current supply for all the LEDs.
 
 **LCD** - Liquid crystal display. LCDs are made up of long-chain molecules in a state between crystal and liquid. When a charge is applied, the molecules align, acting as a polarizer. When paired with a second polarizer, they can either block light or allow it to pass through, appearing either light or dark. A grid of these can form a single-color display. Liquid crystals do not emit light, so a backlight is required to light them up. 
 
@@ -18,8 +20,10 @@ For a more formal explanation of LCD and TFT displays, see [this page from J-Dis
 
 The oldest form of LCD display, patented in the 1980's, is known as Twisted Nematic (TN) LCD, and has limits to its viewing angle. Newer LCD technologies such as [in-plane switching (IPS)](https://www.pctechguide.com/flat-panel-displays/ips-in-plane-switching-lcd-monitors) or [plane-to-line switching (PLS)](https://www.lifewire.com/definition-of-ips-lcd-578662) afford wider viewing angles and brighter screens.  
 
-LED Matrix, 7-segment and alphanumeric, addressable LED
-MAX7219 and other LED multiplexers
+**LED driver ICs** There are many LED driver ICs on the market, which give you control over multiple LED segments from a single synchronous serial interface. Some include PWM control over each channel as well. Popular ones include Maxim's [MAX7219](https://www.maximintegrated.com/en/products/power/display-power-control/MAX7219.html) and Texas Instruments' [TLC5947](https://www.ti.com/product/TLC5947). Many of the hobbyist electronic vendors carry breakout boards for these chips. 
+
+
+ addressable LED
 
 ## Control Methods
 
