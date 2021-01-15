@@ -55,4 +55,4 @@ Adafruit's [Adafruit_EPD library](https://github.com/adafruit/Adafruit_EPD) supp
 
 This usually narrows your choice to 2 or 3 initializers. Try each one in turn until you see the display react as described in the comments. Make sure to change the pin #defines at the top of the code to match your pin numbers as well. 
 
-Once you've got the test working, you're ready to move on to try any of these examples.
+Once you've got the test working, you're ready to move on to try any of [these examples](https://github.com/tigoe/display-examples/tree/main/EPaper_Examples).
