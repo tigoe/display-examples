@@ -33,7 +33,7 @@ Displays for microcontrollers use a variety of control interfaces. The most comm
  * [ePaper](EPaper_Examples/)
 
 ### I2C
- * SSD1306
+ * [SSD1306](SSD1306_OLED_Examples/)
 
 ### Parallel
  * LCD Display - Hitachi HD44780 driver. See [LiquidCrystal library](https://www.arduino.cc/reference/en/libraries/liquidcrystal/)
