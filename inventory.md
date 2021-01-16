@@ -16,7 +16,7 @@ A list of components mentioned in this repository.
 | 1.14" 240x135 Color TFT Display with MicroSD | [Adafruit](https://www.adafruit.com/product/4383) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4383/10650642) | Breakout board  with ST7789 driver IC |
 |1.3inch TFT LCD | [MakerFocus](https://www.makerfocus.com/products/1-3inch-tft-lcd-display-module-3-3v-with-spi-interface-st7789-ic-driver) | [Amazon](https://smile.amazon.com/gp/product/B07P9X3L7M) | ST7789 driver IC| 
 
-# OLED Displays
+## OLED Displays
 
 | Item | Vendor 1 | Vendor 2 | Notes |  
 |--|--|--|--|
