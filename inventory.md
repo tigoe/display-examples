@@ -11,10 +11,10 @@ A list of components mentioned in this repository.
 ## TFT LCD Displays
 
 | Item | Vendor 1 | Vendor 2 | Notes | 
-|----------------|----------------|----------------|---------------|
+|---------|---------|---------|---------|
 | 1.54" 240x240 Wide Angle TFT LCD Display with MicroSD  | [Adafruit](https://www.adafruit.com/product/3787) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3787/8627476) | Breakout board with ST7789 driver IC |
 | 1.14" 240x135 Color TFT Display with MicroSD | [Adafruit](https://www.adafruit.com/product/4383) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4383/10650642) | Breakout board with ST7789 driver IC |
-| 1.3" TFT LCD Display, no MicroSD | [MakerFocus](https://www.makerfocus.com/products/1-3inch-tft-lcd-display-module-3-3v-with-spi-interface-st7789-ic-driver) | [Amazon](https://smile.amazon.com/gp/product/B07P9X3L7M) |  Breakout board with ST7789 driver IC |
+| 1.3" TFT LCD Display, no MicroSD | [MakerFocus](https://bit.ly/3qDYMLo) | [Amazon](https://smile.amazon.com/gp/product/B07P9X3L7M) | Breakout board with ST7789 driver IC |
 | 2.2” Round TFT LCD Display | [DFRobot](https://www.dfrobot.com/product-1794.html) |[Digikey](https://www.digikey.com/en/products/detail/dfrobot/DFR0529/9739905) | Color TFT display |
 
 ## OLED Displays
