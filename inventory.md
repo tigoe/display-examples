@@ -38,7 +38,7 @@ A list of components mentioned in this repository.
 | eInk Breakout Friend with 32KB SRAM | [Adafruit](https://www.adafruit.com/product/4224) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4224/10107219) | Driver board, no display Supports multiple bare ePaper displays |
 | ePaper Adapter Board | [Crystalfontz](https://www.crystalfontz.com/product/cfa10084-epaper-adapter-board) | - | supports 24-position 0.5mm pitch ZIF connector displays |  
 |  1.54" 152x152 3-color breakout  | [Sparkfun](https://www.sparkfun.com/products/retired/14892)| -| Breakout board, discontinued |
-| 1.54" panel, 200x200 | [WaveShare](https://www.waveshare.com/1.54inch-e-paper-module-b.htm) | [Amazon](https://smile.amazon.com/gp/product/B07DH6SB) | Tricolor (Black/white/red).  doesn't have SRAM or SD card |
+| 1.54" panel, 200x200 | [WaveShare](https://www.waveshare.com/1.54inch-e-paper-module-b.htm) | [Amazon](https://smile.amazon.com/Tri-Color-Three-Color-Resolution-Electronic-Controller/dp/B0751NSSPV) | Tricolor (Black/white/red).  doesn't have SRAM or SD card |
 | 1.54" 3-Color display | [Crystalfontz](https://www.crystalfontz.com/product/cfap152152b00154-3-color-epaper-module) | - | Black/white/yellow. Bare display, needs driver board, 24-position 0.5mm pitch ZIF connector |  
 | 2.13" panel, 250x122 for Raspberry Pi | [WaveShare](https://www.waveshare.com/product/displays/e-paper/epaper-3/2.13inch-e-paper-hat.htm) | [Amazon](https://smile.amazon.com/gp/product/B071S8HT76) | Breakout board w/cable | 
 | 2.13" Flexible Monochrome eInk Display - 212x104 |[Adafruit](https://www.adafruit.com/product/4243) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4243/10229998) | bare display, needs driver | 
