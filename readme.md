@@ -14,17 +14,27 @@ There are a number of different kinds of displays that can be driven by a microc
 
 ## Driver Technologies
 
-**Passive vs Active Matrix**- LCD and OLED screens drive their pixels in one of two ways. A **passive matrix** uses a grid of wires which control each pixel using a row-column scanning method. Voltage is applied to each column in sequence. Then the rows are scanned. If the pixel on that column at a given row should be on, then the row wire voltage is taken low to create a voltage difference, and the pixel turns on. An **active matrix** uses a grid of **thin film transistors (TFT)** instead of a row-column scanning apparatus. TFTs allow for greater pixel density and therefore sharper image quality and better response time for each pixel. Jameco offers a good explanation of [passive vs. active matrix driver technology](https://www.jameco.com/Jameco/workshop/Howitworks/how-organic-light-emitting-diodes-work.html). 
+There are a few common methods for driving displays, and a handful of popular manufacturers of driver integrated circuits (ICs). 
+
+### Passive vs Active Matrix
+LCD and OLED screens drive their pixels in one of two ways. A **passive matrix** uses a grid of wires which control each pixel using a row-column scanning method. Voltage is applied to each column in sequence. Then the rows are scanned. If the pixel on that column at a given row should be on, then the row wire voltage is taken low to create a voltage difference, and the pixel turns on. An **active matrix** uses a grid of **thin film transistors (TFT)** instead of a row-column scanning apparatus. TFTs allow for greater pixel density and therefore sharper image quality and better response time for each pixel. Jameco offers a good explanation of [passive vs. active matrix driver technology](https://www.jameco.com/Jameco/workshop/Howitworks/how-organic-light-emitting-diodes-work.html). 
 
 For a more formal explanation of LCD and TFT displays, see [this page from J-Display](https://www.j-display.com/english/technology/lcdbasic.html)
 
 The oldest form of LCD display, patented in the 1980's, is known as Twisted Nematic (TN) LCD, and has limits to its viewing angle. Newer LCD technologies such as [in-plane switching (IPS)](https://www.pctechguide.com/flat-panel-displays/ips-in-plane-switching-lcd-monitors) or [plane-to-line switching (PLS)](https://www.lifewire.com/definition-of-ips-lcd-578662) afford wider viewing angles and brighter screens.  
 
-**LED driver ICs** There are many LED driver ICs on the market, which give you control over multiple LED segments from a single synchronous serial interface. Some include PWM control over each channel as well. Popular ones include Maxim's [MAX7219](https://www.maximintegrated.com/en/products/power/display-power-control/MAX7219.html) and Texas Instruments' [TLC5947](https://www.ti.com/product/TLC5947). Many of the hobbyist electronic vendors carry breakout boards for these chips. 
+### Display Driver ICs
+There are a number of common display driver ICs on the market. Typically a driver IC will be capable of controlling many different sizes and shapes of display, if they are of the same class. For example, you'll see many TFT displays that use [Sitronix' driver ICs](https://www.sitronix.com.tw/en/products/display-driver-ic/), notably the ST7735 and ST7789. Ilitek's [ILI9225](https://www.displayfuture.com/Display/datasheet/controller/ILI9225.pdf) chip is also common in TFTs. This means that libraries written for one vendor's display are likely to work for displays from another vendor, if they use the same chipset. This can be convenient, as it means you can sometimes choose the library whose API you find easiest to work with. 
 
-## Control Interfaces
+### LED multi-segment driver ICs
+ There are many LED driver ICs on the market, which give you control over multiple LED segments from a single synchronous serial interface. Some include PWM control over each channel as well. Popular ones include Maxim's [MAX7219](https://www.maximintegrated.com/en/products/power/display-power-control/MAX7219.html) and Texas Instruments' [TLC5947](https://www.ti.com/product/TLC5947). Many of the hobbyist electronic vendors carry breakout boards for these chips. 
 
-Displays for microcontrollers use a variety of control interfaces. The most common are the ones you see for other electronic modules as well: synchronous serial interfaces like I2C and SPI, or asynchronous serial interfaces.
+ ### Addressable LEDs
+ Recently, drivers for LEDs have reduced in size to the point where a driver can drive a single pixel. Usually made of three to four LEDs and a single driver, these are very popular with electronics hobbyists. For more on these, see [this repository](https://tigoe.github.io/LightProjects/addressable-leds.html).  
+
+## Control Protocols
+Displays for microcontrollers use a variety of control interfaces. The most common are the ones you see for other electronic modules as well: synchronous serial interfaces like I2C and SPI, or asynchronous serial interfaces. also feature parallel interface, requires a large number of I/O pins from your controller.  
+
 
 ### SPI
  * ST7687S round LCD display from DFRobot -- see clock club repo
