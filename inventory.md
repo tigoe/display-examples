@@ -43,13 +43,20 @@ A list of components mentioned in this repository.
 | 2.13" panel, 250x122 for Raspberry Pi | [WaveShare](https://www.waveshare.com/product/displays/e-paper/epaper-3/2.13inch-e-paper-hat.htm) | [Amazon](https://smile.amazon.com/gp/product/B071S8HT76) | Breakout board w/cable | 
 | 2.13" Flexible Monochrome eInk Display - 212x104 |[Adafruit](https://www.adafruit.com/product/4243) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4243/10229998) | bare display, needs driver | 
 
+## Multi-Segment LED Displays
+
+| Item | Vendor 1 | Vendor 2 | Notes | 
+|--|--|--|--|
+|[Broadcom/Avago 5x7-pixel LED displays](https://www.broadcom.com/products/leds-and-displays/smart-alphanumeric-displays/serial-interface) |[Mouser](https://www.mouser.com/Optoelectronics/Displays/LED-Displays-Accessories/_/N-6j73b?P=1yzvvp2&Keyword=HCMS-29&FS=True) | [Digikey](https://www.digikey.com/en/products/filter/display-modules-led-dot-matrix-and-cluster/96?s=N4IgjCBcpgnAHLKoDGUBmBDANgZwKYA0IA9lANogAMIAusQA4AuUIAykwE4CWAdgOYgAvsQC0AFmQg0kLHiKkK4AGywAzAFY6jFpBDCRIAExKAQpxKYAJihIBbAAQAJAMIBZNkaS0hQA) | Newer models of these displays may also work with [this library](https://playground.arduino.cc/Main/LedDisplay/). |
+
+
 ## Display Vendors
 
 * [Adafruit](https://www.adafruit.com/?q=display&sort=BestMatch)
 * [Sparkfun](https://www.sparkfun.com/search/results?term=display)
 * [Seeed Studio](https://www.seeedstudio.com/catalogsearch/result/?q=display)
 * [DFRobot](https://www.dfrobot.com/search-display.html)
-* [WaveShare](https://www.waveshare.com/product/displays.htm)
-* [MakerFocus](https://www.makerfocus.com/collections/display)
+* [WaveShare](https://www.waveshare.com/product/displays.htm) -  note: WaveShare supplies parts mainly through Amazon, and their dire
+* [MakerFocus](https://www.makerfocus.com/collections/display) - note: MakerFocus supplies parts mainly through Amazon, and their direct delivery is not fast. 
 * [Tinkersphere](https://tinkersphere.com/search?controller=search&orderby=position&orderway=desc&search_query=display&submit_search=Search)
 * [CrystalFontz](https://www.crystalfontz.com/) - note: I have not tried their products.

@@ -6,7 +6,9 @@ There are a number of different kinds of displays that can be driven by a microc
 
 Display technologies range from multi-segment LEDs through high-resolution, full-color displays. The major ones are detailed below.
 
-**Multi-Segment LED display** - There are many models of multi-segment LED displays, including the classic 7-segment LEDs, alphanumeric displays, dot-matrix diplays, bar graph displays, RGB LEDs, and others. What these share in common is that they will have either a common-cathode or common-anode structure. Common cathode LEDs have multiple anodes, one for each LED segment, and one cathode for all. common anode LEDs have a single anode and multiple cathode for all the segments. Driving these displays requires a control pin for each LED segment. They are usually driven by a multiplexer or LED driver, which can provide both a common interface for all the LEDs (such as an SPI or I2C interface), and a controlled current supply for all the LEDs.
+**Multi-Segment LED display** - There are many models of multi-segment LED displays, including the classic 7-segment LEDs, alphanumeric displays, dot-matrix diplays, bar graph displays, RGB LEDs, and others. What these share in common is that they will have either a common-cathode or common-anode structure. Common cathode LEDs have multiple anodes, one for each LED segment, and one cathode for all. common anode LEDs have a single anode and multiple cathode for all the segments. Driving these displays requires a control pin for each LED segment. They are usually driven by a multiplexer or LED driver, which can provide both a common interface for all the LEDs (such as an SPI or I2C interface), and a controlled current supply for all the LEDs.  
+
+[Broadcom/Avago's HCMS-29xx display](avagoDisplay.md) is multi-segment LED display that has several 5-7 LED matrices with a synchronous serial interface.  It has the smallest visibly discrete LEDs in its display that I have encountered. 
 
 **LCD** - Liquid crystal display. LCDs are made up of long-chain molecules in a state between crystal and liquid. When a charge is applied, the molecules align, acting as a polarizer. When paired with a second polarizer, they can either block light or allow it to pass through, appearing either light or dark. A grid of these can form a single-color display. Liquid crystals do not emit light, so a backlight is required to light them up. They come im low-resolution, passive-matrix displays which are usually monochrome or higher-resolution, active-matrix screens which have higher resolution and are usually full color.
 
@@ -60,7 +62,6 @@ Displays with I2C interfaces typically have the following pinouts:
  * LCD Display - Hitachi HD44780 driver. See [LiquidCrystal library](https://www.arduino.cc/reference/en/libraries/liquidcrystal/)
  * LED Matrix
  * 7-segment LED displays
- * [Avago HCMS-29xx](https://www.arduino.cc/reference/en/libraries/leddisplay/)
 
 ### Asynchronous Serial
 There are some display modules which have an asynchronous serial (UART) interfaces. These typically have a microcontroller on the display module itself, which is interfacing with one of the types of interfaces above. These modules typically have a communications protocol that is unique to the vendor. They are convenient, but more expensive than their synchronous serial or parallel counterparts. 
