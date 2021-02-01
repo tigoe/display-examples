@@ -13,7 +13,7 @@ The HCMS-29xx displays require the following pin connections from your microcont
 * Enable - the pin that enables the display
 * Reset - the display reset
 
-There are also four voltage pins and three ground pins for this display.  These displays can be daisy-chained so that you can control multiple displays from the same pins. 
+There are also four voltage pins and three ground pins for this display.  These displays can be daisy-chained so that you can control multiple displays from the same pins.
 
 ![HCMS-29xx pin diagram](https://www.pjrc.com/teensy/td_libs_LedDisplay_2.gif)
 _Figure 2. The HCMS-29xx display pin diagram. Image from Paul Stoffregen's library page for this display._
