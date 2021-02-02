@@ -71,10 +71,10 @@ void loop() {
 ````
 
 This repository contains several examples:
-* 8x8LedMatrix - simple test of a matrix, same code as shown above
-* [8x8LedMatrixJoystick](8x8LedMatrixJoystick) - turns on a pixel with the move of a joystick
-* [8x8LedMatrixPixels](8x8LedMatrixJoystick) - calculates the pixel position from a one-dimensional array
-* [LED_Matrices_0001](8x8LedMatrixJoystick) - controls all the LEDs on two 8x8 LED matrices on an Arduino Mega, one at a time
-* [LED_Matrices_pong_0002](8x8LedMatrixJoystick) - Plays pong on 2 8x8 LEDs with two potentiometers. For more on this, see [this blog post](https://www.tigoe.com/pcomp/code/arduinowiring/424/). 
+* [8x8LedMatrix](https://github.com/tigoe/display-examples/blob/main/LED_8x8_Matrix_examples/8x8LEDMatrix/) - simple test of a matrix, same code as shown above
+* [8x8LedMatrixJoystick](https://github.com/tigoe/display-examples/blob/main/LED_8x8_Matrix_examples/8x8LedMatrixJoystick) - turns on a pixel with the move of a joystick
+* [8x8LedMatrixPixels](https://github.com/tigoe/display-examples/blob/main/LED_8x8_Matrix_examples/8x8LedMatrixJoystick) - calculates the pixel position from a one-dimensional array
+* [LED_Matrices_0001](https://github.com/tigoe/display-examples/blob/main/LED_8x8_Matrix_examples/8x8LedMatrixJoystick) - controls all the LEDs on two 8x8 LED matrices on an Arduino Mega, one at a time
+* [LED_Matrices_pong_0002](https://github.com/tigoe/display-examples/blob/main/LED_8x8_Matrix_examples/8x8LedMatrixJoystick) - Plays pong on 2 8x8 LEDs with two potentiometers. For more on this, see [this blog post](https://www.tigoe.com/pcomp/code/arduinowiring/424/). 
 
 
