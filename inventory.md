@@ -60,4 +60,4 @@ A list of components mentioned in this repository.
 * [WaveShare](https://www.waveshare.com/product/displays.htm) -  note: WaveShare supplies parts mainly through Amazon, and their dire
 * [MakerFocus](https://www.makerfocus.com/collections/display) - note: MakerFocus supplies parts mainly through Amazon, and their direct delivery is not fast. 
 * [Tinkersphere](https://tinkersphere.com/search?controller=search&orderby=position&orderway=desc&search_query=display&submit_search=Search)
-* [CrystalFontz](https://www.crystalfontz.com/) - note: I have not tried their products.
+* [CrystalFontz](https://www.crystalfontz.com/)
