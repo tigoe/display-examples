@@ -48,6 +48,7 @@ A list of components mentioned in this repository.
 | Item | Vendor 1 | Vendor 2 | Notes | 
 |--|--|--|--|
 |[Broadcom/Avago 5x7-pixel LED displays](https://www.broadcom.com/products/leds-and-displays/smart-alphanumeric-displays/serial-interface) |[Mouser](https://www.mouser.com/Optoelectronics/Displays/LED-Displays-Accessories/_/N-6j73b?P=1yzvvp2&Keyword=HCMS-29&FS=True) | [Digikey](https://www.digikey.com/en/products/filter/display-modules-led-dot-matrix-and-cluster/96?s=N4IgjCBcpgnAHLKoDGUBmBDANgZwKYA0IA9lANogAMIAusQA4AuUIAykwE4CWAdgOYgAvsQC0AFmQg0kLHiKkK4AGywAzAFY6jFpBDCRIAExKAQpxKYAJihIBbAAQAJAMIBZNkaS0hQA) | Newer models of these displays may also work with [this library](https://playground.arduino.cc/Main/LedDisplay/). |
+| [8x8 LED Displays](LED_8x8_Matrix_examples/readme.md)| [Digikey](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/104020149/10451891) (red) | [Digikey](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/104020150/10451906) (blue) | There are many different colors, models and manufacturers of these, this is just one example. Search any major vendor for others. |
 
 
 ## Display Vendors
