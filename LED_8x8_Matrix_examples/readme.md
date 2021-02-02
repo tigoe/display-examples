@@ -75,6 +75,6 @@ This repository contains several examples:
 * [8x8LedMatrixJoystick](8x8LedMatrixJoystick) - turns on a pixel with the move of a joystick
 * [8x8LedMatrixPixels](8x8LedMatrixJoystick) - calculates the pixel position from a one-dimensional array
 * [LED_Matrices_0001](8x8LedMatrixJoystick) - controls all the LEDs on two 8x8 LED matrices on an Arduino Mega, one at a time
-* [LED_Matrices_pong_0002](8x8LedMatrixJoystick) - Plays pong on 2 8x8 LEDs with two potentiometers
+* [LED_Matrices_pong_0002](8x8LedMatrixJoystick) - Plays pong on 2 8x8 LEDs with two potentiometers. For more on this, see [this blog post](https://www.tigoe.com/pcomp/code/arduinowiring/424/). 
 
 
