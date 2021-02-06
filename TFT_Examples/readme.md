@@ -4,7 +4,6 @@ There are a few common TFT display drivers on the electronics hobbyist market, a
 
 Sitronix-based displays
 * ST7735 and 7789 TFT displays
-  * Adafruit ST7789 board((
   * Adafruit [1.8" ST7735R display with MicroSD Breakout](https://www.adafruit.com/product/358)
   * Adafruit [1.44" ST7735R display with MicroSD Breakout](https://www.adafruit.com/product/2088)
   * Adafruit [1.54" ST7789 Display with MicroSD](https://www.adafruit.com/product/3787)
