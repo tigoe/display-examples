@@ -2,7 +2,6 @@
 
 There are a few common TFT display drivers on the electronics hobbyist market, and a handful of libraries that work with them. 
 
-
 Sitronix-based displays
 * ST7735 and 7789 TFT displays
   * Adafruit ST7789 board((
