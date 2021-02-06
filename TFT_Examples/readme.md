@@ -9,7 +9,7 @@ Sitronix-based displays
   * Adafruit [1.44" ST7735R display with MicroSD Breakout](https://www.adafruit.com/product/2088)
   * Adafruit [1.54" ST7789 Display with MicroSD](https://www.adafruit.com/product/3787)
   * Adafruit [1.14" Display with MicroSD](https://www.adafruit.com/product/4383)
-  * MakerFocus [1.3" LCD Display, no MicroSD](https://bit.ly/3qDYMLo), [Amazon link](https://smile.amazon.com/gp/product/B07P9X3L7M) 
+  * MakerFocus [1.3" LCD Display, no MicroSD](https://bit.ly/3qDYMLo), [Amazon link](https://smile.amazon.com/gp/product/B07P9X3L7M) - This display does not have a CS pin, so it can't be used with other SPI devices at the same time. I have not yet been able to make it function with the Adafruit_7735/7789 library. 
 * DFRobot 7687S [round display](https://www.dfrobot.com/product-1794.html)
   * [DFRobot library for this display](https://github.com/DFRobot/DFRobot_ST7687S)
   * [DFRobot Display library](https://github.com/DFRobot/DFRobot_Display)
