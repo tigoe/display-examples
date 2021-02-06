@@ -1,14 +1,18 @@
 /*
-  QR Code generator for SSD1306 Display
-   Displays a QR code on a SSD1306 128x64 pixel display
-   Uses Adafruit EPD library: http://librarymanager/All#Adafruit_SSD1306
+  QR Code generator for an ST77735 or ST7789 TFT Display
+   Displays a QR code on a TFT display
+   Uses Adafruit ST7735/ST7789 library: http://librarymanager/All#Adafruit_Adafruit_ST7735
    and Richard Moore's qrcode library: http://librarymanager/All#qrcode
-   Code is based on qrcode library example and Adafruit_SSD1306 example.
+   Code is based on qrcode library example and Adafruit_ST7789 example.
    Circuit:
-   - 128x64 SSD1306 OLED display connected to I2C pins.
-
-   This will work with a 128x32 OLED display as long as the
-   offset is 1 and the QR version type is <=3.
+   - 1.54-inch (min) TFT display connected to SPI pins, and connected to
+   the pins listed below.
+   - Screen SDI <-> microcontroller SPI SDO
+   - Screen SCK <-> microcontroller SPI SCK
+   - Screen CS <-> microcontroller SPI CS
+   - Screen D/C <-> microcontroller digital output pin
+   Your pin numbers may vary depending on your display. See
+   the Adafruit ST7735/7789 library examples for different initializers.
 
    To test, enter a text string, then scan it with your mobile device
 
@@ -18,18 +22,27 @@
 */
 
 #include "qrcode.h"
-#include <Wire.h>
-#include <Adafruit_SSD1306.h>
+// include libraries:
+#include <Adafruit_GFX.h>
+//#include <Adafruit_ST7735.h> //  for ST7735 displays
+#include <Adafruit_ST7789.h>   //  for ST7789 displays
+#include <SPI.h>
 
-const int SCREEN_WIDTH = 128; // OLED display width, in pixels
-const int SCREEN_HEIGHT = 64; // OLED display height, in pixels
-const int OLED_RESET = 0; // Reset pin for display (0 or -1 if no reset pin)
-// colors for a monochrome display:
-const int foregroundColor = 0x01;  // white
-const int backgroundColor = 0x00;  // black
+const int TFT_CS = 10; // Chip Select
+const int TFT_RST = 9; // Reset pin for display (0 or -1 if no reset pin)
+const int TFT_DC = 8;  // D/C pin
+// colors for a color display:
+const int backgroundColor = 0xFFFFFF; // white
+const int foregroundColor = 0x000000; // black
 
-// initialize the display library instance:
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+/*
+  Initialize the display library instance.
+  You may need to use a different initializer depending on your screen.
+  seehttps://github.com/adafruit/Adafruit-ST7735-Library/blob/master/examples/displayOnOffTest/displayOnOffTest.ino
+  lines 45ff. for all the displays that the Adafruit library supports.
+*/
+Adafruit_ST7789 display = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
+//Adafruit_ST7735 display = Adafruit_ST7735(TFT_CS, TFT_DC, TFT_RST);
 
 void setup() {
   // initialize serial:
@@ -39,16 +52,14 @@ void setup() {
   // wait 3 sec. for serial monitor to open:
   while (!Serial) delay(3000);
   // start the display:
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  display.init(240,240);  
   // fill with the background color:
   display.fillScreen(backgroundColor);
-  // update the display:
-  display.display();
-  Serial.println("Enter a text message to display:");
+   Serial.println("Enter a text message to display:");
 }
 
 void loop() {
-  // if there's a string in the serial buffer, display it.
+  // if there's a string in the serial buffer, display it. 
   // Then prompt for a message skip the rest of the loop:
   if (Serial.available()) {
     // otherwise, read the serial input and make a QR Code:
@@ -66,7 +77,7 @@ void displayQrCode(String message) {
   // See table at https://github.com/ricmoo/QRCode
   // or https://www.qrcode.com/en/about/version.html for
   // calculation of data capacity of a QR code. Current
-  // settings will support a string of about 100 bytes:
+  // settings will get you about 100 bytes:
   int qrVersion = 4;
   // can be ECC_LOW, ECC_MEDIUM, ECC_QUARTILE and ECC_HIGH (0-3, respectively):
   int qrErrorLevel = ECC_HIGH;
@@ -104,5 +115,4 @@ void displayQrCode(String message) {
   }
   // print the message and display it:
   Serial.println(message);
-  display.display();
 }

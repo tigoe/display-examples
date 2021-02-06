@@ -9,23 +9,30 @@
    Circuit:
    - 1.54-inch ePaper display connected to SPI pins, and connected to
    the pins listed below.
+   - Screen SDI <-> microcontroller SPI SDO
+   - Screen SCK <-> microcontroller SPI SCK
+   - Screen CS <-> microcontroller SPI CS
 
   created 8 Jan 2021
+  modified 6 Feb 2021
   by Tom Igoe
 */
 
 #include "Adafruit_EPD.h"
 #include "qrcode.h"
 
-// pin numbers. In addition to these, the SPI pins
-// must be connected, and note that EPD_CS is the SPI CS pin:
+// pin numbers. Note that EPD_CS is the SPI CS pin:
 const int EPD_CS = 10;
 const int  EPD_DC = 9;
-const int  SRAM_CS = 8;  // for boards without a frame buffer, set to -1
+const int  SRAM_CS = -1;  // for boards without a frame buffer, set to -1
 const int  EPD_RESET = 7;
 const int EPD_BUSY = 6;
+// colors for a monochrome display (Color (red or yellow) is 0x02):
+const int foregroundColor = 0x01;  // white
+const int backgroundColor = 0x00;  // black
 
 /*
+  Initialize the display library instance.
   You may need to use a different initializer depending on your screen.
   see https://github.com/adafruit/Adafruit_EPD/blob/master/examples/EPDTest/EPDTest.ino
   lines 19ff. for all the chipsets that the Adafruit EPD supports.
@@ -36,25 +43,32 @@ Adafruit_IL0373 display(152, 152, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
 //Adafruit_SSD1681 display(200, 200, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
 
 void setup() {
-  // initialize serial?
+  // initialize serial:
   Serial.begin(9600);
   // when reading serial input set a 10ms timeout:
   Serial.setTimeout(10);
-  // wait for serial monitor to open:
-  while (!Serial);
+  // wait 3 sec. for serial monitor to open:
+  while (!Serial) delay(3000);
   // start the display:
   display.begin();
-  display.clearBuffer();
+  // fill with the background color:
+  display.fillScreen(backgroundColor);
+  // update the display:
   display.display();
   Serial.println("Enter a text message to display:");
 }
 
 void loop() {
-  // if there's nothing in the serial buffer, skip the rest of the loop:
-  if (!Serial.available()) return;
-
-  // otherwise, read the serial input and make a QR Code:
-  String message = Serial.readString();
+  // if there's a string in the serial buffer, display it.
+  // Then prompt for a message skip the rest of the loop:
+  if (Serial.available()) {
+    // otherwise, read the serial input and make a QR Code:
+    String incoming = Serial.readString();
+    displayQrCode(incoming);
+    Serial.println("Enter a text message to display:");
+  }
+}
+void displayQrCode(String message) {
   Serial.print("Message length: ");
   Serial.println(message.length());
 
@@ -63,7 +77,7 @@ void loop() {
   // See table at https://github.com/ricmoo/QRCode
   // or https://www.qrcode.com/en/about/version.html for
   // calculation of data capacity of a QR code. Current
-  // settings will get you about 100 bytes:
+  // settings will support a string of about 100 bytes:
   int qrVersion = 4;
   // can be ECC_LOW, ECC_MEDIUM, ECC_QUARTILE and ECC_HIGH (0-3, respectively):
   int qrErrorLevel = ECC_LOW;
@@ -73,9 +87,11 @@ void loop() {
   qrcode_initText(&qrcode, qrcodeBytes, qrVersion, qrErrorLevel, message.c_str());
 
   // QR Code block characteristics will depend on the display:
-  // QR code needs a "quiet zone" of empty space around it, hence the offset:
+  // QR code needs a "quiet zone" of background color around it, hence the offset:
   int offset = 10;
   int blockSize = (display.height() - (offset * 2)) / qrcode.size;
+  // fill with the background color:
+  display.fillScreen(backgroundColor);
 
   // read the bytes of the QR code and set the blocks light or dark, accordingly:
   // vertical loop:
@@ -88,10 +104,10 @@ void loop() {
       // read the block value from the QRcode:
       int blockValue = qrcode_getModule(&qrcode, x, y);
       // set the default block color:
-      int blockColor = EPD_WHITE;
-      // if the block value is 1, set color to white:
+      int blockColor = backgroundColor;
+      // if the block value is 1, set color to foreground color instead:
       if (blockValue == 1) {
-        blockColor = EPD_BLACK;
+        blockColor = foregroundColor;
       }
       // display the block on the screen:
       display.fillRect(blockX, blockY, blockSize, blockSize, blockColor);
