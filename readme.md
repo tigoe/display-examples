@@ -63,8 +63,8 @@ Displays with I2C interfaces typically have the following pinouts:
 * RESET - a reset pin, connects to whicheve pin the microcontroller has assigned for this function. Not all screens implement this pin. 
 
 ### Parallel Connections
- * LCD Display - Hitachi HD44780 driver. See [LiquidCrystal library](https://www.arduino.cc/reference/en/libraries/liquidcrystal/)
- * LED Matrix
+ * Hitachi HD44780 LCD display. See the Arduino [LiquidCrystal library](https://www.arduino.cc/reference/en/libraries/liquidcrystal/). These 2x16 character LCD displays are ubiquitous in the hobbyist market and come in many starter kits for the Uno. They are a passive-matrix LCD with a parallel interface (6 pins) that runs on 5 volts. They will typically not run on 3.3 volts. Each character is a 5x7 pixel matrix, so these are very low-resolution displays. They can usually be foung for $10-$15, which was a bargain in the early Arduino days. Nowadays, if you need an inexpensive 2-line display, some of the OLED displays like the SSD1306 are a better bargain. 
+ * [8x8 LED Matrix](LED_8x8_Matrix_examples/)
  * 7-segment LED displays
 
 ### Asynchronous Serial
