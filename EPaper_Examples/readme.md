@@ -3,16 +3,12 @@ There are lots of ePaper displays on the market now. These notes are not compreh
 
 You can find the [code examples at this link](https://github.com/tigoe/display-examples/tree/main/EPaper_Examples).
 
+The refresh rate on ePaper displays is very slow, on the order of several seconds per frame. However, the advantage to them is that they retain their image when powered down. They have a crisp image, in either black and white, or black, white and one other color. They're ideal for applications where the text or image changes infrequently, but needs to be updated dynamically. 
+
 ## Hardware
 eInk displays are sold either as the bare display or as a breakout board. Figure 1 shows four different boards; the bottom left is a bare display and the others are breakout boards. The breakout boards will connect easily to a solderless breadboard, but the bare displays have only a flexible ribbon connector, typically  designed for a [24 Position, 0.5mm pitch ZIF connector](https://www.crystalfontz.com/product/cs050z24ga0-24-position-zif-connector).
 
-I've used:
-* [Adafruit  1.54" 200x200 monochrome panel](https://www.adafruit.com/product/4196)
-* [Adafruit 1.54" 152x152 3-color panel](https://www.adafruit.com/product/3625)
-* [Sparkfun 1.54" 152x152 3-color panel](https://www.sparkfun.com/products/retired/14892) (discontinued)
-* [WaveShare 1.54" panel, 200x200 resolution](https://smile.amazon.com/gp/product/B07DH6SBZM) [WaveShare site](https://www.waveshare.com/1.54inch-e-paper-module-b.htm)
-* [WaveShare  2.13" panel, 250x122](https://smile.amazon.com/gp/product/B071S8HT76)for Raspberry Pi [WaveShare Site](https://www.waveshare.com/product/displays/e-paper/epaper-3/2.13inch-e-paper-hat.htm)
-* [Crystalfontz 1.54” 3-Color display](https://www.crystalfontz.com/product/cfap152152b00154-3-color-epaper-module) Black/white/yellow. Bare display, needs driver board, 24-position 0.5mm pitch ZIF connector. Works with Adafruit [ePaper Friend](https://www.adafruit.com/product/4224). 
+See the [Inventory page](../inventory.md#epaper-displays) for the various models I've tested. 
 
 ![Figure 1. Four ePaper Displays](epaper-displays.png)
 
