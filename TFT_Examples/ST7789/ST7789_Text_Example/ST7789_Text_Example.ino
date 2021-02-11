@@ -18,6 +18,7 @@
    and TFT pins listed below
 
   created 20 Jan 2021
+  modified 11 Feb 2021
   by Tom Igoe
 */
 
@@ -30,17 +31,21 @@
 #include<Fonts/FreeSans18pt7b.h>
 
 // TFT control pins:
-const int TFT_CS = 10;
+// for any display that doesn't have a given pin, set that 
+// pin to -1. For example, the MakerFocus 1.3" ST7789 screen has 
+// no CS pin. In that case, set TFT_CS to -1.
+const int TFT_CS =  10;
 const int TFT_RST = 9;
 const int TFT_DC = 8;
-const int TFT_TE = 7;
+
 // change these to match your display's resolution:
 const int TFT_WIDTH = 240;
 const int TFT_HEIGHT = 240;
 
 Adafruit_ST7789 display = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 
-// set an offscreen buffer for thigns you want to update frequently:
+// set an offscreen buffer for things you want to update frequently.
+// Size it to the max area you need for the thing to be updated:
 GFXcanvas1 canvas(80, 80);
 
 int fontColor = 0x6677FF;  // light blue
@@ -50,6 +55,9 @@ void setup() {
   Serial.begin(9600);
   while (!Serial);
   display.init(TFT_WIDTH, TFT_HEIGHT);
+    // For the MakerFocus 1.3" module with no CS pin,
+  // you need to change the SPI mode:
+  //  display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
   // set screen rotation (0-3):
   // might need to change depending on which display you use:
   display.setRotation(3);
