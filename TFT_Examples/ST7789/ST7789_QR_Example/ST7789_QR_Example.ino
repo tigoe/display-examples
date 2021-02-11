@@ -17,7 +17,7 @@
    To test, enter a text string, then scan it with your mobile device
 
   created 8 Jan 2021
-  modified 6 Feb 2021
+  modified 11 Feb 2021
   by Tom Igoe
 */
 
@@ -28,17 +28,26 @@
 #include <Adafruit_ST7789.h>   //  for ST7789 displays
 #include <SPI.h>
 
-const int TFT_CS = 10; // Chip Select
-const int TFT_RST = 9; // Reset pin for display (0 or -1 if no reset pin)
-const int TFT_DC = 8;  // D/C pin
+// TFT control pins:
+// for any display that doesn't have a given pin, set that 
+// pin to -1. For example, the MakerFocus 1.3" ST7789 screen has 
+// no CS pin. In that case, set TFT_CS to -1.
+const int TFT_CS =  10;
+const int TFT_RST = 9;
+const int TFT_DC = 8;
+
+// change these to match your display's resolution:
+const int TFT_WIDTH = 240;
+const int TFT_HEIGHT = 240;
+
 // colors for a color display:
 const int backgroundColor = 0xFFFFFF; // white
 const int foregroundColor = 0x000000; // black
 
 /*
   Initialize the display library instance.
-  You may need to use a different initializer depending on your screen.
-  seehttps://github.com/adafruit/Adafruit-ST7735-Library/blob/master/examples/displayOnOffTest/displayOnOffTest.ino
+  You may need to use a different initializer depending on your screen. See
+  https://github.com/adafruit/Adafruit-ST7735-Library/blob/master/examples/displayOnOffTest/displayOnOffTest.ino
   lines 45ff. for all the displays that the Adafruit library supports.
 */
 Adafruit_ST7789 display = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
@@ -52,14 +61,17 @@ void setup() {
   // wait 3 sec. for serial monitor to open:
   while (!Serial) delay(3000);
   // start the display:
-  display.init(240,240);  
+  display.init(TFT_WIDTH, TFT_HEIGHT);
+  // For the MakerFocus 1.3" module with no CS pin,
+  // you need to change the SPI mode:
+  //  display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
   // fill with the background color:
   display.fillScreen(backgroundColor);
-   Serial.println("Enter a text message to display:");
+  Serial.println("Enter a text message to display:");
 }
 
 void loop() {
-  // if there's a string in the serial buffer, display it. 
+  // if there's a string in the serial buffer, display it.
   // Then prompt for a message skip the rest of the loop:
   if (Serial.available()) {
     // otherwise, read the serial input and make a QR Code:
