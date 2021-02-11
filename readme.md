@@ -54,7 +54,10 @@ A display with an SPI interface will feature most or all of the following pins:
 * CS - Chip Select. Connects to the microcontroller's SPI CS pin
 * D/C - Data/Command. Connects to whatever pin the microcontroller has assigned for this function.
 * RESET - a reset pin, connects to whicheve pin the microcontroller has assigned for this function.
-* BUSY - an output pin to indicate that the display controller is busy. connects to whicheve pin the microcontroller has assigned for this function.
+* BUSY - an output pin to indicate that the display controller is busy. connects to whicheve pin the microcontroller has assigned for this function. This pin is less common on TFT displays than on ePaper displays.
+* Backlight - most TFT screens have a pin which enables or disables the backlight of the screen. The naming for this is not standardized: BLK, LITE, TE are all in use. Read the module's datasheet for details.
+
+Adafruit tends to add an SD card reader and sometimes a static RAM chip to its modules, which are also controlled by the SPI bus. When these are present, you'll see chip select pins for them, usually labeled CCS or SCDS for the SD card and SRCS for the SRAM. If you're not using the SD card or SRAM in your application, you won't need these. 
 
 ### I2C Connections
 Displays with I2C interfaces typically have the following pinouts:
