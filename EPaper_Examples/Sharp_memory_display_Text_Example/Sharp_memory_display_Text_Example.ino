@@ -35,7 +35,7 @@ const int SHARP_HEIGHT = 168;
 // initialize the screen:
 Adafruit_SharpMem display(SHARP_SCK, SHARP_SDI, SHARP_CS,
                           SHARP_WIDTH, SHARP_HEIGHT);
-// set an offscreen buffer for thigns you want to update frequently:
+// set an offscreen buffer for things you want to update frequently:
 GFXcanvas1 canvas(60, 60);
 
 int fontColor = 0;  // white
