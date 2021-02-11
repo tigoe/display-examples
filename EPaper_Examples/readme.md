@@ -21,7 +21,7 @@ Adafruit and Sparkfun add SRAM frame buffers and SD cards to their breakout boar
 
 WaveShare and other breakout boards don't have the frame buffer or SD card. That means that if you use the Adafruit library to drive a third party board, you'll need to indicate that there is no buffer. You can do this by setting the `SRAM_CS` pin to -1 in your code.  If you're using the Adafruit or Sparkfun boards, can use the SD card using the SD card library, of course, and the SRAM simply by setting the `SRAM_CS` pin to whatever pin you want to connect it to. 
 
-The pin connections for connecting ePaper displays to an Arduino Nano are as follows. For the non-SPI pins you can use whatever you want; these are the pins I use in my examples.
+The pin connections for connecting ePaper displays to an Arduino Nano are as follows. For the non-SPI pins you can use whatever you want.
 
 *Table 1. ePaper to Arduino Pin Connections*
 

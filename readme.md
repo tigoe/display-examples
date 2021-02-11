@@ -1,9 +1,7 @@
 # Displays for Microcontrollers
-
 There are a number of different kinds of displays that can be driven by a microcontroller. This repository contains examples for many of them, along with information about display technologies and some of the more popular libraries for controlling them. 
 
 ## Display Technologies
-
 Display technologies range from multi-segment LEDs through high-resolution, full-color displays. The major ones are detailed below.
 
 **Multi-Segment LED display** - There are many models of multi-segment LED displays, including the classic 7-segment LEDs, alphanumeric displays, dot-matrix diplays, bar graph displays, RGB LEDs, and others. What these share in common is that they will have either a common-cathode or common-anode structure. Common cathode LEDs have multiple anodes, one for each LED segment, and one cathode for all. common anode LEDs have a single anode and multiple cathode for all the segments. Driving these displays requires a control pin for each LED segment. They are usually driven by a multiplexer or LED driver, which can provide both a common interface for all the LEDs (such as an SPI or I2C interface), and a controlled current supply for all the LEDs.  
