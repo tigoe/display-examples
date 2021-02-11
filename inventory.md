@@ -34,7 +34,7 @@ A list of components mentioned in this repository.
 |--|--|--|--|
 | 1.54" Monochrome ePaper Display with SRAM - 200x200 | [Adafruit](https://www.adafruit.com/product/4196) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4196/10060722) | Breakout board |
 | 1.54" Tri-Color eInk / ePaper Display with SRAM - 152x152- Red Black White | [Adafruit](https://www.adafruit.com/product/3625) |  [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3625/9489367) | Breakout board  |
-| SHARP Memory Display Breakout - 1.3" 168x144 Monochrome | [Adafruit](https://www.adafruit.com/product/3502) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3502/7386264) | Breakout board |
+| SHARP Memory Display Breakout - 1.3" 168x144 Monochrome | [Adafruit](https://www.adafruit.com/product/3502) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3502/7386264) | Breakout board> NOt an actual ePaper display, though it looks like one. The image fades when you remove power, but it retains for a few second. The display rate is more like an LCD. |
 | eInk Breakout Friend with 32KB SRAM | [Adafruit](https://www.adafruit.com/product/4224) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4224/10107219) | Driver board, no display Supports multiple bare ePaper displays |
 | ePaper Adapter Board | [Crystalfontz](https://www.crystalfontz.com/product/cfa10084-epaper-adapter-board) | - | supports 24-position 0.5mm pitch ZIF connector displays |  
 |  1.54" 152x152 3-color breakout  | [Sparkfun](https://www.sparkfun.com/products/retired/14892)| -| Breakout board, discontinued |
