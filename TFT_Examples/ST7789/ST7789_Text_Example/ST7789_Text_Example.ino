@@ -14,8 +14,16 @@
   http://librarymanager/All#Adafruit_ST7789
     and fonts from the GFX library.
    Circuit:
-   - ST7789 color display attached to SPI pins
-   and TFT pins listed below
+   - TFT display connected to SPI pins, and connected to
+   the pins listed below.
+   - Screen SDI <-> microcontroller SPI SDO
+   - Screen SCK <-> microcontroller SPI SCK
+   - Screen CS <-> microcontroller SPI CS
+   - Screen D/C <-> microcontroller digital output pin
+   - Screen Reset <-> microcontroller TFT_RST output pin
+
+  Your pin numbers may vary depending on your display. See
+   the Adafruit ST7735/7789 library examples for different initializers.
 
   created 20 Jan 2021
   modified 11 Feb 2021
@@ -31,8 +39,8 @@
 #include<Fonts/FreeSans18pt7b.h>
 
 // TFT control pins:
-// for any display that doesn't have a given pin, set that 
-// pin to -1. For example, the MakerFocus 1.3" ST7789 screen has 
+// for any display that doesn't have a given pin, set that
+// pin to -1. For example, the MakerFocus 1.3" ST7789 screen has
 // no CS pin. In that case, set TFT_CS to -1.
 const int TFT_CS =  10;
 const int TFT_RST = 9;
@@ -55,14 +63,14 @@ void setup() {
   Serial.begin(9600);
   while (!Serial);
   display.init(TFT_WIDTH, TFT_HEIGHT);
-    // For the MakerFocus 1.3" module with no CS pin,
+  // For the MakerFocus 1.3" module with no CS pin,
   // you need to change the SPI mode:
-  //  display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
+//    display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
   // set screen rotation (0-3):
   // might need to change depending on which display you use:
   display.setRotation(3);
   Serial.println("Display is good to go");
-  
+
   // set fonts for both display and canvas:
   display.setFont(&FreeSans18pt7b);
   canvas.setFont(&FreeSans18pt7b);

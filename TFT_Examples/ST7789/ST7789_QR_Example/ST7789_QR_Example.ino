@@ -5,12 +5,14 @@
    and Richard Moore's qrcode library: http://librarymanager/All#qrcode
    Code is based on qrcode library example and Adafruit_ST7789 example.
    Circuit:
-   - 1.54-inch (min) TFT display connected to SPI pins, and connected to
+   - TFT display connected to SPI pins, and connected to
    the pins listed below.
    - Screen SDI <-> microcontroller SPI SDO
    - Screen SCK <-> microcontroller SPI SCK
    - Screen CS <-> microcontroller SPI CS
    - Screen D/C <-> microcontroller digital output pin
+   - Screen Reset <-> microcontroller TFT_RST output pin
+   
    Your pin numbers may vary depending on your display. See
    the Adafruit ST7735/7789 library examples for different initializers.
 
@@ -29,8 +31,8 @@
 #include <SPI.h>
 
 // TFT control pins:
-// for any display that doesn't have a given pin, set that 
-// pin to -1. For example, the MakerFocus 1.3" ST7789 screen has 
+// for any display that doesn't have a given pin, set that
+// pin to -1. For example, the MakerFocus 1.3" ST7789 screen has
 // no CS pin. In that case, set TFT_CS to -1.
 const int TFT_CS =  10;
 const int TFT_RST = 9;
@@ -64,7 +66,7 @@ void setup() {
   display.init(TFT_WIDTH, TFT_HEIGHT);
   // For the MakerFocus 1.3" module with no CS pin,
   // you need to change the SPI mode:
-  //  display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
+  //    display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
   // fill with the background color:
   display.fillScreen(backgroundColor);
   Serial.println("Enter a text message to display:");
