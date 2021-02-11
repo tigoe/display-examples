@@ -21,20 +21,7 @@ Adafruit and Sparkfun add SRAM frame buffers and SD cards to their breakout boar
 
 WaveShare and other breakout boards don't have the frame buffer or SD card. That means that if you use the Adafruit library to drive a third party board, you'll need to indicate that there is no buffer. You can do this by setting the `SRAM_CS` pin to -1 in your code.  If you're using the Adafruit or Sparkfun boards, can use the SD card using the SD card library, of course, and the SRAM simply by setting the `SRAM_CS` pin to whatever pin you want to connect it to. 
 
-The pin connections for connecting ePaper displays to an Arduino Nano are as follows. For the non-SPI pins you can use whatever you want.
-
-*Table 1. ePaper to Arduino Pin Connections*
-
-| Function | Arduino Pin | eInk pin | Notes |
-|---|---|---|---|
-| SPI SCK | 13 | SCK | SPI clock | 
-| SPI SDI | 12 | SDO or N/C | SPI data in to microcontroller' not used on some boards |
-| SPI SDO | 11 | SDI | SPI data out from microcontroller |
-| SPI CS | 10 | DCS or CS | SPI chip select |
-| EPD DC  | 9 | ePaper D/C pin |
-| SRAM CS  | 8 or -1 | SRCS or N/C | for boards without a frame buffer, set to -1 |
-| EPD RESET  |  7 | ePaper reset pin | |
-| EPD BUSY  |  6 | ePaper busy pin | | 
+See the [SPI connections](../readme.md#spi-connections) section of the main page of this repository for a list of typical pin connections. 
 
 ## Libraries
 I've tried a few libraries, but I've had the most success with Adafruit's [Adafruit_EPD library](https://github.com/adafruit/Adafruit_EPD). It runs all the panels above so far, with some modifications. Their [guide](https://learn.adafruit.com/adafruit-eink-display-breakouts?view=all) is also helpful. 
