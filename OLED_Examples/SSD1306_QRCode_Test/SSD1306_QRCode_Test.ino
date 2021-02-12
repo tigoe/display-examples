@@ -22,7 +22,7 @@
 #include <Adafruit_SSD1306.h>
 
 const int SCREEN_WIDTH = 128; // OLED display width, in pixels
-const int SCREEN_HEIGHT = 64; // OLED display height, in pixels
+const int SCREEN_HEIGHT = 32; // OLED display height, in pixels
 const int OLED_RESET = 0; // Reset pin for display (0 or -1 if no reset pin)
 // colors for a monochrome display:
 const int foregroundColor = 0x01;  // white
@@ -37,7 +37,7 @@ void setup() {
   // when reading serial input set a 10ms timeout:
   Serial.setTimeout(10);
   // wait 3 sec. for serial monitor to open:
-  while (!Serial) delay(3000);
+  if (!Serial) delay(3000);
   // start the display:
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   // fill with the background color:
@@ -67,7 +67,7 @@ void displayQrCode(String message) {
   // or https://www.qrcode.com/en/about/version.html for
   // calculation of data capacity of a QR code. Current
   // settings will support a string of about 100 bytes:
-  int qrVersion = 4;
+  int qrVersion = 3;
   // can be ECC_LOW, ECC_MEDIUM, ECC_QUARTILE and ECC_HIGH (0-3, respectively):
   int qrErrorLevel = ECC_HIGH;
 
@@ -77,7 +77,7 @@ void displayQrCode(String message) {
 
   // QR Code block characteristics will depend on the display:
   // QR code needs a "quiet zone" of background color around it, hence the offset:
-  int offset = 10;
+  int offset = 1;
   int blockSize = (display.height() - (offset * 2)) / qrcode.size;
   // fill with the background color:
   display.fillScreen(backgroundColor);

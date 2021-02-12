@@ -48,7 +48,7 @@ void setup() {
   // when reading serial input set a 10ms timeout:
   Serial.setTimeout(10);
   // wait 3 sec. for serial monitor to open:
-  while (!Serial) delay(3000);
+  if (!Serial) delay(3000);
   // start the display:
   display.begin();
   // fill with the background color:
