@@ -12,7 +12,7 @@
    - Screen CS <-> microcontroller SPI CS
    - Screen D/C <-> microcontroller digital output pin
    - Screen Reset <-> microcontroller TFT_RST output pin
-   
+
    Your pin numbers may vary depending on your display. See
    the Adafruit ST7735/7789 library examples for different initializers.
 
@@ -61,12 +61,12 @@ void setup() {
   // when reading serial input set a 10ms timeout:
   Serial.setTimeout(10);
   // wait 3 sec. for serial monitor to open:
-  while (!Serial) delay(3000);
+  if (!Serial) delay(3000);
   // start the display:
   display.init(TFT_WIDTH, TFT_HEIGHT);
   // For the MakerFocus 1.3" module with no CS pin,
   // you need to change the SPI mode:
-  //    display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
+  //display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
   // fill with the background color:
   display.fillScreen(backgroundColor);
   Serial.println("Enter a text message to display:");
@@ -94,7 +94,7 @@ void displayQrCode(String message) {
   // settings will get you about 100 bytes:
   int qrVersion = 4;
   // can be ECC_LOW, ECC_MEDIUM, ECC_QUARTILE and ECC_HIGH (0-3, respectively):
-  int qrErrorLevel = ECC_HIGH;
+  int qrErrorLevel = ECC_MEDIUM;
 
   // allocate QR code memory:
   byte qrcodeBytes[qrcode_getBufferSize(qrVersion)];
@@ -127,6 +127,7 @@ void displayQrCode(String message) {
       display.fillRect(blockX, blockY, blockSize, blockSize, blockColor);
     }
   }
+  // display.println("Scan me");
   // print the message and display it:
   Serial.println(message);
 }
