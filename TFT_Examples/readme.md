@@ -2,6 +2,8 @@
 
 There are a few common TFT display drivers on the electronics hobbyist market, and a handful of libraries that work with them. 
 
+You can find the [code examples at this link](https://github.com/tigoe/display-examples/tree/main/TFT_Examples).
+
 ## I/O Pins
 Most TFT displays tend to have an SPI interface, with some extra pins, as explained on the [main page](../readme.md#spi-connections) of this repo.
 
