@@ -61,7 +61,7 @@ int bgColor = 0x0;         // black
 void setup() {
   // initialize serial and wait 3 secs for serial monitor to open:
   Serial.begin(9600);
-  while (!Serial) delay(3000);
+  if (!Serial) delay(3000);
   display.init(TFT_WIDTH, TFT_HEIGHT);
   // For the MakerFocus 1.3" module with no CS pin,
   // you need to change the SPI mode:
