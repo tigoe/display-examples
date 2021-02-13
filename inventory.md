@@ -14,7 +14,7 @@ A list of components mentioned in this repository.
 |---------|---------|---------|---------|
 | 1.54" 240x240 Wide Angle TFT LCD Display with MicroSD  | [Adafruit](https://www.adafruit.com/product/3787) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3787/8627476) | Breakout board with ST7789 driver IC |
 | 1.14" 240x135 Color TFT Display with MicroSD | [Adafruit](https://www.adafruit.com/product/4383) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4383/10650642) | Breakout board with ST7789 driver IC |
-| 1.3" TFT LCD Display, no MicroSD | [MakerFocus](https://bit.ly/3qDYMLo) | [Amazon](https://smile.amazon.com/gp/product/B07P9X3L7M) | Breakout board with ST7789 driver IC. This display does not have a CS pin, so it can't be used with other SPI devices at the same time. I have not yet been able to make it function with the Adafruit_7735/7789 library |
+| 1.3" TFT LCD Display, no MicroSD | [MakerFocus](https://bit.ly/3qDYMLo) | [Amazon](https://smile.amazon.com/gp/product/B07P9X3L7M) | Breakout board with ST7789 driver IC. This display does not have a CS pin, so it can't be used with other SPI devices at the same time. To use it with the Adafruit_7735/7789 library, init using `SPI_MODE3` |
 | 2.2” Round TFT LCD Display | [DFRobot](https://www.dfrobot.com/product-1794.html) |[Digikey](https://www.digikey.com/en/products/detail/dfrobot/DFR0529/9739905) | Color TFT display |
 
 ## OLED Displays
@@ -24,9 +24,9 @@ A list of components mentioned in this repository.
 | Micro OLED | [Sparkfun](https://www.sparkfun.com/products/13003) | [Digikey](https://www.digikey.com/en/products/detail/sparkfun-electronics/LCD-13003/5673774) | Breakout board  | 
 | SSD1306 0.91" 128x32 I2C interface | [MakerFocus](https://www.makerfocus.com/collections/oled/products/2pcs-i2c-oled-display-module-0-91-inch-i2c-ssd1306-oled-display-module-1) | [Amazon](https://smile.amazon.com/gp/product/B079BN2J8V) | Breakout board, Qty. 2| 
 | SSD1306 0.96" 128x64 |  [MakerFocus](https://www.makerfocus.com/collections/oled/products/4pcs-i2c-oled-0-96-inch-display-module-with-du-pont-wire-40-pin-for-arduino-uno-r3-stm) | [Amazon](https://smile.amazon.com/Display-Module-SSD1306-Du-pont-Arduino/dp/B07VDXYDVY) | Breakout board, Qty. 4 | 
-| 128x128 Round OLED display  | [Crystalfontz](https://www.crystalfontz.com/product/cfal128128b0011w-128x128-round-oled-display) | - | Bare display, needs driver board, 24-position 0.5mm pitch ZIF connector | 
-| 128x56 Transparent OLED Display | [Crystalfontz](https://www.crystalfontz.com/product/cfal12856a00151b-128x56-transparent-oled-screen) | - | Bare display, needs driver board, 24-position 0.5mm pitch ZIF connector |
-| OLED Breakout Board | [Crystalfontz](https://www.crystalfontz.com/product/cfa10105-oled-breakout-board) | - | Supports 24-position 0.5mm pitch ZIF connector |  
+| 128x128 Round OLED display  | [Crystalfontz](https://www.crystalfontz.com/product/cfal128128b0011w-128x128-round-oled-display) | - | Bare display, needs driver board, 24-position 0.5mm pitch ZIF connector and voltage converter circuit | 
+| 128x56 Transparent OLED Display | [Crystalfontz](https://www.crystalfontz.com/product/cfal12856a00151b-128x56-transparent-oled-screen) | - | Bare display, needs driver board, 24-position 0.5mm pitch ZIF connector and voltage converter circuit. Works with breakout board below.  |
+| OLED Breakout Board | [Crystalfontz](https://www.crystalfontz.com/product/cfa10105-oled-breakout-board) | - | Supports 24-position 0.5mm pitch ZIF connector transparend OLED boards, but not the round ones above. |  
 
 ## ePaper Displays
 
