@@ -14,10 +14,10 @@ This driver chip has both an SPI and an I2C interface, though many of the less e
 
 There are a number of 128x64 pixel models on the market that have one line of yellow pixels and the rest blue. You can't change the color of the pixels, so this can be annoying if you're looking for a single monochrome display. For example, a QR code in yellow and blue is not readable on most mobile devices. Figures 1 and 2 show the difference.
 
-![Photo of three SSD1306 OLED displays displaying text](img/ssd1306_text.jpg)
+![Photo of three SSD1306 OLED displays displaying text](img/SSD1306_text.jpg)
 _Figure 1. Three SSD1306 OLED displays side by side. Left to right: 128x32, 128,64 monochrome, 128x64 blue and yellow._
 
-![Photo of three SSD1306 OLED displays displaying QR codes](img/ssd1306_QR.jpg)
+![Photo of three SSD1306 OLED displays displaying QR codes](img/SSD1306_QR.jpg)
 _Figure 2. Three SSD1306 OLED displays side by side showing QR codes. Left to right: 128x32, 128,64 monochrome, 128x64 blue and yellow. All three displays contain the same QR code message, but the one in blue and yellow is not camera-readable. None are camera-readable from this photo because of the degradation of the image._
 
 ### Sparkfun Micro OLED Display
