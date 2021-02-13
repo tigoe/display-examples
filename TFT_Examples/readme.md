@@ -29,7 +29,7 @@ ILI9225
   * [Tinkersphere breakout board](https://tinkersphere.com/arduino-compatible-components/336-tft-lcd-display-22-arduino-compatible.html) for this display
   * [ILI9225 library from Nkawu](https://github.com/Nkawu/TFT_22_ILI9225)
 
-  ## Libraries
+## Libraries
 There's no standard library for TFT screens, unfortunately. Vendors tend to support the displays they make in their own breakout boards, and not others. As with other types of displays, a well-supported library like the Adafruit libraries makes the display worth more, but limits you to the types of displays that vendor offers. Display manufacturers like Ilitek and Sitronix do not appear to release their own libraries for their displays.
 
 ### ST7735/7789
