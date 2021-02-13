@@ -31,9 +31,6 @@ The Micro OLED board only works with their [Micro OLED library](https://github.c
 ![photo of a microOLED breakout board attached to a Nano 33 IoT](img/microOLED.jpg)
 _Figure 3. MicroOLED display attached to a Nano 33 IoT._
 
-### SSD1309 Transparent OLED Display
-The SSD1309 transparent OLED Display and breakout board  from Crystalfontz is a 128x56 display that you can see through. It works with the u8g2 library and the Crystalfontz OLED Breakout Board. It uses an SSD1309 driver, the same as Sparkfun's Transparent Graphical OLED Breakout board. I have not tested the Sparkfun board with the u8g2 library, nor this board with the Sparkfun Hyperdisplay library yet, however. There is an [example for this display](https://github.com/tigoe/display-examples/tree/main/OLED_Examples/u8g2_SSD1309_OLED_Example) using the SPI interface in this repository.  
-
 ### Crystalfontz Displays
 Crystalfontz makes a number of displays, and I've just started to work with a few of them. These notes are very preliminary. 
 * [128x128 Round OLED display](https://www.crystalfontz.com/product/cfal128128b0011w-128x128-round-oled-display) - uses SSD1327 driver
@@ -41,6 +38,9 @@ Crystalfontz makes a number of displays, and I've just started to work with a fe
 * [OLED Breakout Board](https://www.crystalfontz.com/product/cfa10105-oled-breakout-board). Works with some of Crystalfontz' displays, but not the round ones. 
 
 The Crystalfontz boards tend to default to the SPI interface. See the [SPI connections](../readme.md#spi-connections) section of the main page of this repository for a list of typical pin connections. 
+
+#### SSD1309 Transparent OLED Display
+The SSD1309 transparent OLED Display and breakout board  from Crystalfontz is a 128x56 display that you can see through. It works with the u8g2 library and the Crystalfontz OLED Breakout Board. It uses an SSD1309 driver, the same as Sparkfun's Transparent Graphical OLED Breakout board. I have not tested the Sparkfun board with the u8g2 library, nor this board with the Sparkfun Hyperdisplay library yet, however. There is an [example for this display](https://github.com/tigoe/display-examples/tree/main/OLED_Examples/u8g2_SSD1309_OLED_Example) using the SPI interface in this repository.  
 
 ## Libraries
 Despite having the same driver, not all of these displays interoprate with all libraries. [Adafruit's SSD1306 library](https://github.com/adafruit/Adafruit_SSD1306) works well with all the 128x64 and 128x32 displays that I've tried, but not with ones that have other resolutions, like the Sparkfun Micro OLED, which has a 64x48 resolution. 
