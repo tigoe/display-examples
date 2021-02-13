@@ -1,6 +1,6 @@
 # TFT LCD Displays
 
-There are a few common TFT display drivers on the electronics hobbyist market, and a handful of libraries that work with them. 
+There are a few common TFT display drivers on the electronics hobbyist market, and a handful of libraries that work with them. TFT displays are high resolution and full color, unlike the OLED or ePaper displays mentioned in this repository. 
 
 You can find the [code examples at this link](https://github.com/tigoe/display-examples/tree/main/TFT_Examples).
 
