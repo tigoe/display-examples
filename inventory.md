@@ -21,7 +21,7 @@ A list of components mentioned in this repository.
 
 | Item | Vendor 1 | Vendor 2 | Notes |  
 |--|--|--|--|
-| Micro OLED | [Sparkfun](https://www.sparkfun.com/products/13003) | [Digikey](https://www.digikey.com/en/products/detail/sparkfun-electronics/LCD-13003/5673774) | Breakout board  | 
+| Micro OLED | [Sparkfun](https://www.sparkfun.com/products/13003) | [Digikey](https://www.digikey.com/en/products/detail/sparkfun-electronics/LCD-13003/5673774) | Breakout board. Does not work with the other SSD1306 libraries.  | 
 | SSD1306 0.91" 128x32 I2C interface | [MakerFocus](https://www.makerfocus.com/collections/oled/products/2pcs-i2c-oled-display-module-0-91-inch-i2c-ssd1306-oled-display-module-1) | [Amazon](https://smile.amazon.com/gp/product/B079BN2J8V) | Breakout board, Qty. 2| 
 | SSD1306 0.96" 128x64 |  [MakerFocus](https://www.makerfocus.com/collections/oled/products/4pcs-i2c-oled-0-96-inch-display-module-with-du-pont-wire-40-pin-for-arduino-uno-r3-stm) | [Amazon](https://smile.amazon.com/Display-Module-SSD1306-Du-pont-Arduino/dp/B07VDXYDVY) | Breakout board, Qty. 4 | 
 | 128x128 Round OLED display  | [Crystalfontz](https://www.crystalfontz.com/product/cfal128128b0011w-128x128-round-oled-display) | - | Bare display, needs driver board, 24-position 0.5mm pitch ZIF connector and voltage converter circuit | 
@@ -34,7 +34,7 @@ A list of components mentioned in this repository.
 |--|--|--|--|
 | 1.54" Monochrome ePaper Display with SRAM - 200x200 | [Adafruit](https://www.adafruit.com/product/4196) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4196/10060722) | Breakout board |
 | 1.54" Tri-Color eInk / ePaper Display with SRAM - 152x152- Red Black White | [Adafruit](https://www.adafruit.com/product/3625) |  [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3625/9489367) | Breakout board  |
-| SHARP Memory Display Breakout - 1.3" 168x144 Monochrome | [Adafruit](https://www.adafruit.com/product/3502) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3502/7386264) | Breakout board> NOt an actual ePaper display, though it looks like one. The image fades when you remove power, but it retains for a few second. The display rate is more like an LCD. |
+| SHARP Memory Display Breakout - 1.3" 168x144 Monochrome | [Adafruit](https://www.adafruit.com/product/3502) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/3502/7386264) | Breakout board. Not an actual ePaper display, though it looks like one. The image fades when you remove power, but it retains for a few second. The display rate is more like an LCD. |
 | eInk Breakout Friend with 32KB SRAM | [Adafruit](https://www.adafruit.com/product/4224) | [Digikey](https://www.digikey.com/en/products/detail/adafruit-industries-llc/4224/10107219) | Driver board, no display Supports multiple bare ePaper displays, including ones not from Adafruit |
 | ePaper Adapter Board | [Crystalfontz](https://www.crystalfontz.com/product/cfa10084-epaper-adapter-board) | - | supports 24-position 0.5mm pitch ZIF connector displays. I have yet to get this to work with the Adafruit_EPD library. |
 |  1.54" 152x152 3-color breakout  | [Sparkfun](https://www.sparkfun.com/products/retired/14892)| -| Breakout board, discontinued |
