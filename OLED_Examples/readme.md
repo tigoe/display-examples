@@ -37,8 +37,7 @@ Crystalfontz makes a number of displays, and I've just started to work with a fe
 * [128x56 Transparent OLED Display](https://www.crystalfontz.com/product/cfal12856a00151b-128x56-transparent-oled-screen) - uses  SSD1309 driver. Works with u8g2 library and OLED breakout board below. 
 * [OLED Breakout Board](https://www.crystalfontz.com/product/cfa10105-oled-breakout-board). Works with some of Crystalfontz' displays, but not the round ones. 
 
-### Pin Connections
-See the [SPI connections](../readme.md#spi-connections) section of the main page of this repository for a list of typical pin connections. 
+The Crystalfontz boards tend to default to the SPI interface. See the [SPI connections](../readme.md#spi-connections) section of the main page of this repository for a list of typical pin connections. 
 
 ## Libraries
 Despite having the same driver, not all of these displays interoprate with all libraries. [Adafruit's SSD1306 library](https://github.com/adafruit/Adafruit_SSD1306) works well with all the 128x64 and 128x32 displays that I've tried, but not with ones that have other resolutions, like the Sparkfun Micro OLED, which has a 64x48 resolution. 
