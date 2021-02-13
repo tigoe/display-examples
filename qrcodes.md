@@ -4,7 +4,7 @@
 ## QR Code Examples
 QR codes can be generated from a text string and translated to a microcontroller display using Richard Moore's [qrcode library for Arduino]() and the graphics library for your particular display. This repository contains examples for multiple display types:
 * [QRCode example for EPaper displays](https://github.com/tigoe/display-examples/tree/main/EPaper_Examples/EInk_QRCode_Test)
-* [QRCode example for TFT displays](https://github.com/tigoe/display-examples/tree/main/TFT_Examples/ST7789/ST7789_QR_Example)
+* [QRCode example for ST7735/7789 TFT displays](https://github.com/tigoe/display-examples/tree/main/TFT_Examples/ST7789/ST7789_QR_Example)
 * [QRCode example for monochrome OLED displays](https://github.com/tigoe/display-examples/tree/main/OLED_Examples/SSD1306_QRCode_Test)
 * [QRCode example for Sparkfun MicroOLED](https://github.com/tigoe/display-examples/tree/main/OLED_Examples/Micro_OLED/Micro_OLED_QRcode_example)
 
