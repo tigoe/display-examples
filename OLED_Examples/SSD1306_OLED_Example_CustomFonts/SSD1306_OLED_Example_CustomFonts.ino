@@ -23,22 +23,22 @@
 #include "font.h"
 
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
-#define SCREEN_HEIGHT 32 // OLED display height, in pixels
+#define SCREEN_HEIGHT 64 // OLED display height, in pixels
 #define OLED_RESET    0  // Reset pin for display (0 or -1 if no reset pin)
 
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
 
 void setup() {
-  // initialize serial and wait for serial monitor to open:
+  // initialize serial and wait 3 sec.  for serial monitor to open:
   Serial.begin(9600);
-  //  while (!Serial);
-  // I2C address is 0x3C
-  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3D)) {
+  if (!Serial) delay(3000);
+  // I2C address is 0x3C. For some 128x64 modules, it's 3D:
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
     Serial.println("Display setup failed");
     while (true);
   }
-
+  // set up custom font from font.h file:
   display.setFont(&Open_Sans_Regular_12);
   Serial.println("Display is good to go");
 }
@@ -55,7 +55,8 @@ void loop() {
   // set the text color to white:
   display.setTextColor(SSD1306_WHITE);
 
-  // move the cursor to 0,0:
+  // move the cursor to 12,0. Custom fonts measure from the
+  // baseline up, so you have to position at the baseline:
   display.setCursor(12, 0);
   // print the seconds:
   display.print("secs: ");
