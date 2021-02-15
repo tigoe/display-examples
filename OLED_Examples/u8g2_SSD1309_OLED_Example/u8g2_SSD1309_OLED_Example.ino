@@ -5,11 +5,19 @@
   Circuit:
   - SSD1309 128x64 Transparent OLED screen:
   -   https://www.crystalfontz.com/product/cfal12856a00151b-128x56-transparent-oled-screen
-  - Crystalfontx OLED breakout board:
+  - Crystalfontz OLED breakout board:
   -   https://www.crystalfontz.com/product/cfa10105-oled-breakout-board
+  - Breakout board pins connected as below:
+    - Breakout pin 1: 3.3V
+    - Breakout pin 2: Ground
+    - Breakout pin 3: Arduino SPI CLK
+    - Breakout pin 4: Arduino SPI SDO
+    - Breakout pin 5: Arduino SPI CS (OLED_CS below)
+    - Breakout pin 7: Arduino OLED_DC
+    - Breakout pin 9: Arduino OLED_RESET
 
   created 25 Jan 2021
-  modified 3 Feb 2021
+  modified 15 Feb 2021
   by Tom Igoe
 */
 
@@ -24,8 +32,7 @@ const int  OLED_RESET =  8;
 // https://github.com/olikraus/u8g2/wiki/u8g2setupcpp#constructor-name
 // for driver names. There are many. It goes:
 // U8G2_driver_resolution_name_bufferSize_commInterface:
-
-U8G2_SSD1309_128X64_NONAME0_F_4W_HW_SPI display(U8G2_R0, OLED_CS, OLED_DC, OLED_RESET);
+U8G2_SSD1309_128X64_NONAME2_F_4W_HW_SPI display(U8G2_R0, OLED_CS, OLED_DC, OLED_RESET);
 
 
 void setup() {
