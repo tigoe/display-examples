@@ -1,8 +1,10 @@
 # TFT LCD Displays
 
-There are a few common TFT display drivers on the electronics hobbyist market, and a handful of libraries that work with them. TFT displays are high resolution and full color, unlike the OLED or ePaper displays mentioned in this repository. 
+There are a few common TFT display drivers on the electronics hobbyist market, and a handful of libraries that work with them. TFT displays are high resolution and full color, unlike the OLED or ePaper displays mentioned in this repository. Most libraries for color TFT displays implement the usual 24-bit RGB color space, where 0xFF0000 is red, 0x00FF00 is green, and 0x0000FF is blue.
 
 You can find the [code examples at this link](https://github.com/tigoe/display-examples/tree/main/TFT_Examples).
+
+TFT displays can be slow to update. Therefore, it's sometimes usefil  to draw only part of the display at once. Adafruits GFX library includes a Canvas class, which lets you update elements offscreen and then draw them. It doesn't speed up the display, but it can simplify drawing a subset of the screen. See [this example](https://github.com/tigoe/display-examples/TFT_Examples/ST7789/ST7789_Text_Example) to see it in use. Other libraries don't include a canvas, but you can draw a filled rectangle over part of the screen and then draw on top of it, as shown in [this example](https://github.com/tigoe/display-examples/TFT_Examples/ILI9225/ILI9225_Text_example) for the ILI9225. 
 
 ## Hardware
 The TFT boards I have encountered so far have had either Sitronix or Ilitek interfaces. The models are detailed below. 
@@ -39,9 +41,8 @@ The Adafruit_ST7735/7789 library and Adafruit_GFX library works well with some o
 The DFRobot_ST7687S library has slow refresh rate on the ST7687S board. It's unclear whether the issue is the library or the board, however. I have yet to find another library to use with this display, though there are a couple other vendors for the board itself on Amazon. Unfortunately the u8g2 library doesn't support this display, though it does support many of the Sitronix boards.
 
 ### ILI9225
-The TFT_22_ILI9225 for the Ilitek works fairly well with the display, though its graphics API is different than some of the other graphics libraries, and doesn't implement the Printable API, so you can't use commands like `print()` and `println()` with it. 
+The [TFT_22_ILI9225](https://github.com/Nkawu/TFT_22_ILI9225) library works with this display, and [its methods are well documented](https://github.com/Nkawu/TFT_22_ILI9225/wiki#method-reference). Its graphics API is different than some of the other graphics libraries, and doesn't implement the Printable API, so you can't use commands like `print()` and `println()` with it. It has its own `drawText()` method instead, which takes an Arduino String object. It comes with a few [built-in fonts](https://github.com/Nkawu/TFT_22_ILI9225/wiki#standard-fonts), and includes many of the [Adafruit GFX fonts](https://github.com/Nkawu/TFT_22_ILI9225/wiki#gfx-fonts), and you can generate your own fonts using the The [squix.ch custom font generator](http://oleddisplay.squix.ch/#/home). Set the settings to
+* Preview Display: TFT 2.4"
+* Library Version: Adafruit GFX
 
-
-
-  
-  
+Like other color TFT libraries, its color scheme is a standard RGB hexadecimal code, where 0xFF0000 is red, 0x00FF00 is green, and 0x0000FF is blue.
