@@ -56,6 +56,8 @@ A display with an SPI interface will feature most or all of the following pins:
 
 Adafruit tends to add an SD card reader and sometimes a static RAM chip to its modules, which are also controlled by the SPI bus. When these are present, you'll see chip select pins for them, usually labeled CCS or SCDS for the SD card and SRCS for the SRAM. If you're not using the SD card or SRAM in your application, you won't need these. 
 
+*Note:* the electronics industry has used the terms "master/slave" to refer to controller devices and peripheral devices for decades without regard for the historical context of, and offense caused by, those terms. As a result, you will see the terms MOSI/MISO/SS in data sheets to refer to the pins of an SPI device While a modern standard naming scheme has not yet emerged to replace these, there are proposals in discussion. The Open Source Hardware Association has [this proposal](https://www.oshwa.org/a-resolution-to-redefine-spi-signal-names/), for example. Make Magazine has [this proposal](https://makezine.com/2021/06/02/mosi-miso-and-140-years-of-wrong/). The debate is not resolved, and you will likely see some variations on the terms. The SDO, SDI, and SCK terms are the most widely accepted terms with the least historical baggage, but unfortunately, it's still necessary to be aware of the other possible terms for pins in SPI.
+
 ### I2C Connections
 Displays with I2C interfaces typically have the following pinouts:
 * SDA - Serial data, connects to the microcontroller's I2C SDA pin
