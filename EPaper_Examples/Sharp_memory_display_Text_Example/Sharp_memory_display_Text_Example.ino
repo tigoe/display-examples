@@ -13,6 +13,7 @@
    - SHARP memory display attached to SPI pins listed below
 
   created 20 Jan 2021
+  updated 14 Feb 2023
   by Tom Igoe
 */
 
@@ -43,7 +44,7 @@ int bgColor = 1;         // black
 void setup() {
   // initialize serial and wait for serial monitor to open:
   Serial.begin(9600);
-  while (!Serial);
+  if (!Serial) delay(3000);
   display.begin();
   display.clearDisplay();
   // set screen rotation (0-3):
@@ -76,6 +77,4 @@ void loop() {
   // print sensor reading:
   display.println(sensorReading);
   display.refresh();
-
-
 }
