@@ -14,7 +14,7 @@
    - Screen CS <-> microcontroller SPI CS
 
   created 8 Jan 2021
-  modified 6 Feb 2021
+  modified 14 Feb 2023
   by Tom Igoe
 */
 
@@ -23,10 +23,11 @@
 
 // pin numbers. Note that EPD_CS is the SPI CS pin:
 const int EPD_CS = 10;
-const int  EPD_DC = 9;
-const int  SRAM_CS = -1;  // for boards without a frame buffer, set to -1
-const int  EPD_RESET = 7;
-const int EPD_BUSY = 6;
+const int EPD_DC = 9;
+const int SRAM_CS = 8; // for boards without a frame buffer, set to -1
+const int EPD_RESET = 5;
+const int EPD_BUSY = 7;
+
 // colors for a monochrome display (Color (red or yellow) is 0x02):
 const int foregroundColor = 0x01;  // white
 const int backgroundColor = 0x00;  // black
@@ -38,7 +39,7 @@ const int backgroundColor = 0x00;  // black
   lines 19ff. for all the chipsets that the Adafruit EPD supports.
 */
 // supports Adafruit's 1.54inch displays, Sparkfun's SparkX 1.54" display:
-Adafruit_IL0373 display(152, 152, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
+Adafruit_SSD1608 display(200, 200, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
 // supports WaveShare's 1.54" display. Set SRAM_CS to -1:
 //Adafruit_SSD1681 display(200, 200, EPD_DC, EPD_RESET, EPD_CS, SRAM_CS, EPD_BUSY);
 
