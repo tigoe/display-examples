@@ -19,7 +19,7 @@
    To test, enter a text string, then scan it with your mobile device
 
   created 8 Jan 2021
-  modified 11 Feb 2021
+  modified 14 Feb 2023
   by Tom Igoe
 */
 
@@ -34,7 +34,7 @@
 // for any display that doesn't have a given pin, set that
 // pin to -1. For example, the MakerFocus 1.3" ST7789 screen has
 // no CS pin. In that case, set TFT_CS to -1.
-const int TFT_CS =  10;
+const int TFT_CS =  -1; //10;
 const int TFT_RST = 9;
 const int TFT_DC = 8;
 
@@ -63,10 +63,10 @@ void setup() {
   // wait 3 sec. for serial monitor to open:
   if (!Serial) delay(3000);
   // start the display:
-  display.init(TFT_WIDTH, TFT_HEIGHT);
+//  display.init(TFT_WIDTH, TFT_HEIGHT);
   // For the MakerFocus 1.3" module with no CS pin,
   // you need to change the SPI mode:
-  //display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
+  display.init(TFT_WIDTH, TFT_HEIGHT, SPI_MODE3);
   // fill with the background color:
   display.fillScreen(backgroundColor);
   Serial.println("Enter a text message to display:");
